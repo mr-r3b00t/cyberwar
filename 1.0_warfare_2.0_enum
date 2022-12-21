@@ -1,0 +1,68 @@
+REM ################################
+REM           CAN YOU SEE ME???
+REM ################################
+
+REM ################################
+REM ###########CIBERWAR 2.0#########
+REM ################################
+
+REM ################################
+REM ################################
+REM  mRr3b00t 21/12/2022
+REM ########################################################
+REM A script to get caught if anyone is watching... if....
+REM ########################################################
+
+hostname
+whoami
+whoami /all
+net use
+route print
+ipconfig /all
+arp -a
+cmdkey /list
+systeminfo
+
+wmic qfe list full /format:list
+
+netsh firewall set service type = remotedesktop mode = enable
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+
+net accounts
+
+net share
+
+net statistics workstation
+net statistics server
+
+net config workstation
+net config server
+
+net user
+
+net user administrator
+
+net localgroup administrators
+
+start /wait /min "msinfo32 /report c:\windows\temp\msinforeport.txt"
+
+wmic product get name
+
+net start
+
+schtasks /Query
+
+set time = time /T
+set date = date /T
+
+echo %date%
+echo %time%
+
+
+schtasks /create /tn Demo /tr notepad.exe /sc ONIDLE /I 1 /f
+schtasks | findstr Demo
+schtasks /End /Tn Demo
+schtasks /Delete /Tn Demo /f
+
+REM schtasks /create /tn Demo1 /tr notepad.exe /sc once /st %time%  /sd %date% /ru System
+
