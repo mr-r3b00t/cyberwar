@@ -66,3 +66,12 @@ schtasks /Delete /Tn Demo /f
 
 REM schtasks /create /tn Demo1 /tr notepad.exe /sc once /st %time%  /sd %date% /ru System
 
+REM ##############################
+REM RUN some SHELLZ
+REM ##############################
+start powershell.exe
+start "PowerShell.exe -Version 2"
+start cmd.exe
+conhost.exe
+
+
