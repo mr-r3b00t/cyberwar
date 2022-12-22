@@ -1,4 +1,4 @@
 # cyberwar
-Grade A Cybe Weapons
+Grade A Cyber Weapons
 
-MilCyber Tactik00l 137 w3ap0nz
+MilCyber Tactik00l 1337 w3ap0nz
